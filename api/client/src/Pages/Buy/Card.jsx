@@ -31,7 +31,7 @@ import {
 } from "../../Assets/icons";
 import { Valorant_Points } from "../../Assets/icons";
 import "./card.scss";
-import {axiosInstance} from "../../config";
+import axios from "axios";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -128,7 +128,7 @@ export default function Card({ eachcard }) {
   const [onecard, setoneCard] = useState([]);
   // const [rankkkk, setrankkkk] = useState(eachcard.Rank);
   const handleOpen = async () => {
-    const res = await axiosInstance.get(`/viewaccount/${eachcard.DisplayName}`);
+    const res = await axios.get(`/viewaccount/${eachcard.DisplayName}`);
     // console.log(res.data);
     setoneCard(res.data);
     // console.log(onecard.selected[0],"onecard.selected");

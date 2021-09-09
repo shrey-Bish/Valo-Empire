@@ -10,7 +10,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { oniclaw } from '../../Assets/icons';
 import EnhancedTable from './Tablepg';
-import {axiosInstance} from "../../config";
+import axios from "axios";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -62,7 +62,7 @@ export default function Formsell() {
     setDisplay(false)
     setError1(false);
     try {
-        await axiosInstance.post("/user", {
+        await axios.post("/user", {
           Name,
           DisplayName,
           email,

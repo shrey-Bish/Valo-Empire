@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Bottombar from "../../Components/Bottombar";
 import Topbar from "../../Components/Topbar";
 import "./buy.scss";
-import {axiosInstance} from "../../config";
+import axios from "axios";
 import Card from "./Card";
 import {  phegif, phegif2 } from "../../Assets/icons";
 import "tachyons";
@@ -12,7 +12,7 @@ export default function Buy() {
   const [card, setCard] = useState([]);
   useEffect(() => {
     const getallcards = async () => {
-      const res = await axiosInstance.get("/viewall");
+      const res = await axios.get("/viewall");
       // console.log(res.data);
       setCard(res.data);
       // console.log(card);

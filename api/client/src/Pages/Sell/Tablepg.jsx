@@ -31,7 +31,7 @@ import {
   Select,
 } from "@material-ui/core";
 import { radianiteP, valorantP } from "../../Assets/icons";
-import {axiosInstance} from "../../config";
+import axios from "axios";
 
 
 function descendingComparator(a, b, orderBy) {
@@ -289,7 +289,7 @@ export default function EnhancedTable({
     // console.log(selected, "gegg");
     e.preventDefault();
     try {
-      const res = await axiosInstance.post(`/account/${DisplayName}`, {
+      const res = await axios.post(`/account/${DisplayName}`, {
         Radianite,
         selected,
         ValorantP,
