@@ -21,6 +21,7 @@ import Switch from "@material-ui/core/Switch";
 import DeleteIcon from "@material-ui/icons/Delete";
 import FilterListIcon from "@material-ui/icons/FilterList";
 import { rows, headCells } from "./data";
+import MuiAlert from '@material-ui/lab/Alert';
 import {
   Button,
   FormControl,
@@ -29,6 +30,7 @@ import {
   InputLabel,
   MenuItem,
   Select,
+  Snackbar,
 } from "@material-ui/core";
 import { radianiteP, valorantP } from "../../Assets/icons";
 import axios from "axios";
@@ -60,7 +62,9 @@ function stableSort(array, comparator) {
   return stabilizedThis.map((el) => el[0]);
 }
 
-
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
 function EnhancedTableHead(props) {
   const {
@@ -282,7 +286,17 @@ export default function EnhancedTable({
   const [Radianite, setRadianite] = React.useState(0);
   const [ValorantP, setValorantP] = React.useState(0);
   const [rank, setrank] = React.useState("");
+  const [open, setOpen] = React.useState(false);
 
+
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
   const handleSubmit = async (e) => {
     const ffffffffffff = selected.map((eachoneS) => (eachoneS.name = "image"));
     console.log(ffffffffffff, "segesgeg");
@@ -298,6 +312,7 @@ export default function EnhancedTable({
       });
       // console.log("erororrrr111");
       res.data && window.location.replace("/buy");
+      setOpen(true);
     } catch (err) {
       console.log(err, "aefeef");
     }
@@ -552,6 +567,11 @@ export default function EnhancedTable({
                 Submit for Listing
               </Button>
             )}
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success">
+          Your Account has been successfully Listed !
+        </Alert>
+      </Snackbar>
           </div>
         </div>
       ) : (
