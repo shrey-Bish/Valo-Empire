@@ -63,6 +63,7 @@ import v22 from "./v22.png"
 import v23 from "./v23.png"
 import v24 from "./v24.png"
 import v25 from "./v25.png"
+import v26 from "./v26.png"
 
 
 
@@ -92,6 +93,8 @@ import p21 from "./p21.png"
 import p22 from "./p22.png"
 import p23 from "./p23.png"
 import p24 from "./p24.png"
+import p25 from "./p25.png"
+import p26 from "./p26.png"
 
 import o1 from "./o1.png"
 import o2 from "./o2.png"
@@ -113,18 +116,20 @@ import o17 from "./o17.png"
 import o18 from "./o18.png"
 import o19 from "./o19.png"
 import o20 from "./o20.png"
+import o21 from "./o21.png"
 
-import m1 from "./o1.png"
-import m2 from "./o2.png"
-import m3 from "./o3.png"
-import m4 from "./o4.png"
-import m5 from "./o5.png"
-import m6 from "./o6.png"
-import m7 from "./o7.png"
-import m8 from "./o8.png"
-import m9 from "./o9.png"
-import m10 from "./o10.png"
-import m11 from "./o11.png"
+import m1 from "./m1.png"
+import m2 from "./m2.png"
+import m3 from "./m3.png"
+import m4 from "./m4.png"
+import m5 from "./m5.png"
+import m6 from "./m6.png"
+import m7 from "./m7.png"
+import m8 from "./m8.png"
+import m9 from "./m9.png"
+import m10 from "./m10.png"
+import m11 from "./m11.png"
+import m12 from "./m12.png"
 
 
 import od1 from "./od1.png"
@@ -136,6 +141,8 @@ import od6 from "./od6.png"
 import od7 from "./od7.png"
 import od8 from "./od8.png"
 import od9 from "./od9.png"
+import od10 from "./od10.png"
+
 
 import a1 from "./a1.png"
 import a2 from "./a2.png"
@@ -163,6 +170,8 @@ import b7 from "./b7.png"
 import b8 from "./b8.png"
 import b9 from "./b9.png"
 import b10 from "./b10.png"
+import b11 from "./b11.png"
+import b12 from "./b12.png"
 
 import g1 from "./g1.png"
 import g2 from "./g2.png"
@@ -181,6 +190,8 @@ import g14 from "./g14.png"
 import g15 from "./g15.png"
 import g16 from "./g16.png"
 import g17 from "./g17.png"
+import g18 from "./g18.png"
+import g19 from "./g19.png"
 
 
 
@@ -199,6 +210,8 @@ import j11 from "./j11.png"
 import j12 from "./j12.png"
 import j13 from "./j13.png"
 import j14 from "./j14.png"
+import j15 from "./j15.png"
+
 
 import bu1 from "./bu1.png"
 import bu2 from "./bu2.png"
@@ -216,6 +229,7 @@ import bu13 from "./bu13.png"
 import bu14 from "./bu14.png"
 import bu15 from "./bu15.png"
 import bu16 from "./bu16.png"
+import bu17 from "./bu17.png"
 
 
 import st1 from "./st1.png"
@@ -230,6 +244,7 @@ import st9 from "./st9.png"
 import st10 from "./st10.png"
 import st11 from "./st11.png"
 import st12 from "./st12.png"
+import st13 from "./st13.png"
 
 
 
@@ -306,6 +321,7 @@ import c15 from "./c15.png"
 import c16 from "./c16.png"
 import c17 from "./c17.png"
 import c18 from "./c18.png"
+import c19 from "./c19.png"
 
 
 import t1 from "./t1.png"
@@ -329,6 +345,7 @@ import t18 from "./t18.png"
 import t19 from "./t19.png"
 import t20 from "./t20.png"
 import t21 from "./t21.png"
+import t22 from "./t22.png"
 
 
 
@@ -355,6 +372,7 @@ import h18 from "./h18.png"
 import h19 from "./h19.png"
 import h20 from "./h20.png"
 import h21 from "./h21.png"
+import h22 from "./h22.png"
 
 
 
@@ -393,6 +411,10 @@ import x32 from "./x32.png"
 import x33 from "./x33.png"
 import x34 from "./x34.png"
 import x35 from "./x35.png"
+import x36 from "./x36.png"
+import x37 from "./x37.png"
+
+
 import card1 from "./card1.jpg"
 import card2 from "./card2.jpg"
 import card3 from "./card3.jpg"
@@ -442,23 +464,23 @@ export {
     Immortal2,
     Immortal3,
     Valorant_Points,
-    v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15,v16,v17,v18,v19,v20,v21,v22,v23,v24,v25,
+    v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15,v16,v17,v18,v19,v20,v21,v22,v23,v24,v25,v26,
     
-    p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,
-    o1,o2,o3, o4,o5,o6,o7,o8,o9,o10,o11,o12,o13,o14,o15,o16,o17,o18,o19,o20,
-    m1,m2,m3, m4,m5,m6,m7,m8,m9,m10,m11,
-    od1,od2,od3,od4,od5,od6,od7,od8,od9,
+    p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,
+    o1,o2,o3, o4,o5,o6,o7,o8,o9,o10,o11,o12,o13,o14,o15,o16,o17,o18,o19,o20,o21,
+    m1,m2,m3, m4,m5,m6,m7,m8,m9,m10,m11,m12,
+    od1,od2,od3,od4,od5,od6,od7,od8,od9,od10,
     a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,
-    b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,
-    g1,g2,g3, g4,g5,g6,g7,g8,g9,g10,g11,g12,g13,g14,g15,g16,g17,
-    j1,j2,j3,j4,j5,j6,j7,j8,j9,j10,j11,j12,j13,j14,
-    bu1,bu2,bu3, bu4,bu5,bu6,bu7,bu8,bu9,bu10,bu11,bu12,bu13,bu14,bu15,bu16,
-    st1,st2,st3, st4,st5,st6,st7,st8,st9,st10,st11,st12,
+    b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,
+    g1,g2,g3, g4,g5,g6,g7,g8,g9,g10,g11,g12,g13,g14,g15,g16,g17,g18,g19,
+    j1,j2,j3,j4,j5,j6,j7,j8,j9,j10,j11,j12,j13,j14,j15,
+    bu1,bu2,bu3, bu4,bu5,bu6,bu7,bu8,bu9,bu10,bu11,bu12,bu13,bu14,bu15,bu16,bu17,
+    st1,st2,st3, st4,st5,st6,st7,st8,st9,st10,st11,st12,st13,
     s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22,s23,
     sh1,sh2,sh3, sh4,sh5,sh6,sh7,sh8,sh9,
     f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14,f15,
-    c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,
-    t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16,t17,t18,t19,t20,t21,
-    h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11,h12,h13,h14,h15,h16,h17,h18,h19,h20,h21,
-    x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20,x21,x22,x23,x24,x25,x26,x27,x28,x29,x30,x31,x32,x33,x34,x35,
+    c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,c19,
+    t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16,t17,t18,t19,t20,t21,t22,
+    h1,h2,h3,h4,h5,h6,h7,h8,h9,h10,h11,h12,h13,h14,h15,h16,h17,h18,h19,h20,h21,h22,
+    x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12,x13,x14,x15,x16,x17,x18,x19,x20,x21,x22,x23,x24,x25,x26,x27,x28,x29,x30,x31,x32,x33,x34,x35,x36,x37,
 }
