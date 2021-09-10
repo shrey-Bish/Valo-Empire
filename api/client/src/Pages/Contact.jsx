@@ -14,6 +14,7 @@ import EmailIcon from "@material-ui/icons/Email";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import Topbar from "../Components/Topbar";
 import Bottombar from "../Components/Bottombar";
+import { Link } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
@@ -261,7 +262,7 @@ export default function Contact() {
                       variant="body4"
                       gutterBottom
                     >
-                     XYhile#8207
+                       <a href="https://discord.gg/2cpY32mU" style={{textDecoration: "none",color: "#CFC5C5"}}>https://discord.gg/2cpY32mU</a>
                     </Typography>
                   </Typography>
                   <Typography

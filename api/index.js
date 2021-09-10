@@ -4,8 +4,13 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const accountsRoute = require("./routes/AccDetails")
 const path = require("path");
+const cors = require('cors');
 dotenv.config();
 
+app.use(express.json());
+app.use(cors({
+  origin: '*'
+}));
 app.use(express.json());
 
 
