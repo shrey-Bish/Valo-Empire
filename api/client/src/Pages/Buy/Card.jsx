@@ -3,6 +3,7 @@ import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import React, { useEffect, useState } from "react";
 import "tachyons";
 import CancelIcon from "@material-ui/icons/Cancel";
+import InstagramIcon from '@material-ui/icons/Instagram';
 import {
   radianitepoints,
   Immortal1,
@@ -274,13 +275,13 @@ export default function Card({ eachcard }) {
               <div className="tag">₹ {finalprice}</div>
               <a
                 style={{ textDecoration: "none" }}
-                href={`https://api.whatsapp.com/send?phone=917906661882&text=i am interested in buying ${onecard.DisplayName}'s account .Tell me further proceedings`}
+                href="https://www.instagram.com/valoempire/"
               >
                 <Button
                   variant="contained"
                   color="primary"
                   className={classes.button}
-                  endIcon={<WhatsAppIcon>Buy</WhatsAppIcon>}
+                  endIcon={<InstagramIcon>Buy</InstagramIcon>}
                 >
                   Buy
                 </Button>

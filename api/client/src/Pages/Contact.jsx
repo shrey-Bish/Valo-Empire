@@ -15,6 +15,7 @@ import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import Topbar from "../Components/Topbar";
 import Bottombar from "../Components/Bottombar";
 import { Link } from "react-router-dom";
+import InstagramIcon from '@material-ui/icons/Instagram';
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
@@ -270,20 +271,20 @@ export default function Contact() {
                     variant="body4"
                     gutterBottom
                   >
-                    <WhatsAppIcon className={classes.icon} />
+                    <InstagramIcon className={classes.icon} />
                     <Typography
                       className={classes.rtxtt}
                       variant="body4"
                       gutterBottom
                     >
-                      Whatsapp :
+                      Instagram :
                     </Typography>
                     <Typography
                       className={classes.rtxt1}
                       variant="body4"
                       gutterBottom
                     >
-                      7906661882
+                    <a href="https://www.instagram.com/valoempire/" style={{textDecoration: "none",color: "#CFC5C5"}}>https://www.instagram.com/valoempire/</a>
                     </Typography>
                   </Typography>
                 </div>
