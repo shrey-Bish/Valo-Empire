@@ -263,7 +263,7 @@ export default function Contact() {
                       variant="body4"
                       gutterBottom
                     >
-                       <a href="https://discord.gg/2cpY32mU" style={{textDecoration: "none",color: "#CFC5C5"}}>https://discord.gg/2cpY32mU</a>
+                       <a href="https://discord.gg/2cpY32mU" style={{textDecoration: "none",color: "#CFC5C5"}}>discord.gg/2cpY32mU</a>
                     </Typography>
                   </Typography>
                   <Typography
@@ -284,7 +284,7 @@ export default function Contact() {
                       variant="body4"
                       gutterBottom
                     >
-                    <a href="https://www.instagram.com/valoempire/" style={{textDecoration: "none",color: "#CFC5C5"}}>https://www.instagram.com/valoempire/</a>
+                    <a href="https://www.instagram.com/valoempire/" style={{textDecoration: "none",color: "#CFC5C5"}}>instagram.com/valoempire</a>
                     </Typography>
                   </Typography>
                 </div>
