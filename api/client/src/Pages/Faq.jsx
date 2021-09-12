@@ -22,7 +22,7 @@ export default function Faq()
                     <br />
                     <div className= "lista">
                       
-                        <div className= "item">
+                        {/* <div className= "item">
                             <div className= "item_header">
                             <h4 className= "pregunta-q">How do we avoid spam on our site ?</h4>
                                 <br/>
@@ -31,7 +31,7 @@ export default function Faq()
                                 
                             </div>
                            
-                        </div>
+                        </div> */}
                         <div className= "item">
                             <div className= "item_header">
                             <h4 className= "pregunta-q">Do you need to Sign Up ?</h4>

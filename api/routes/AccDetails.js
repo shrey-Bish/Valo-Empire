@@ -70,6 +70,26 @@ router.get("/viewall", async (req, res) => {
     res.status(500).json(err);
   }
 });
+router.get("/viewskin", async (req, res) => {
+  try {
+    
+    const details = await Account.find({'selected.0': {$exists: true}, isSold : false});
+    // console.log(details)
+    res.status(200).json(details);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+router.get("/viewrank", async (req, res) => {
+  try {
+    
+    const details = await Account.find({'selected.0': {$exists: false}, isSold : false});
+    // console.log(details)
+    res.status(200).json(details);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 //get an account
 

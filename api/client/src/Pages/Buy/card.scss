@@ -137,13 +137,14 @@
         background-image: url(https://c.tenor.com/lTn_Gj0ljzYAAAAd/jett-valorant.gif);
         background-repeat: no-repeat;
         position: absolute;
-        bottom: 0px;
+        bottom: 90px;
         background-size: 100% 100%;
         border-radius: 8px;
         transition: 1.6s;
 
         img {
-            margin-left: 80px;
+            margin-left: auto;
+            margin-right: auto;
             display: none;
         }
     }
@@ -201,7 +202,7 @@
 
 .card:hover .Photo {
 
-    transform: scale(1, 1) translateY(-220px);
+    transform: scale(1, 1) translateY(-120px);
     background-image: none;
     // margin-left:115px;
 
@@ -210,8 +211,8 @@
 
     // background-position: 0 -25px ;
     img {
-        height: 150px;
-        width: 150px;
+        height: 120px;
+        width: 120px;
         position: relative;
         display: flex;
 
@@ -270,10 +271,11 @@
 }
 
 #style-2 {
+    background-color: black;
     height: 400px;
     margin-top: 50px;
     overflow-y: scroll;
-    padding-right: 10px;
+    padding-right: 0px;
 
     @media screen and (max-width: 600px) {
         width: 700px;
@@ -284,11 +286,12 @@
     @media screen and (min-width: 601px) and (max-width: 960px) {
         width: 110%;
         height: 600px;
+        margin-left: -35px;
     }
 
     @media screen and (min-width: 961px) and (max-width: 1280px) {
         width: 100%;
-        margin-left: -35px;
+        margin-left: -0px;
         margin-top: 150px;
         height: 800px;
     }
@@ -505,8 +508,8 @@
 
     .rankdiv {
         img {
-            height: 150px;
-            width: 150px;
+            height: 100px;
+            width: 100px;
         }
 
         @media screen and (max-width: 600px) {
@@ -525,29 +528,24 @@
             top: 30px;
 
             img {
-                height: 200px;
-                width: 200px;
+                height: 100px;
+            width: 100px;
             }
         }
     }
 
     .name1 {
-        margin: 1rem;
-
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: auto;
+        margin-right: auto;
         letter-spacing: 2px;
+        font-family: Arial, Helvetica, sans-serif;
         // color : #a574ff;
-        color: mix(rgba(36, 0, 0, 1), rgba(0, 212, 255, 1), 5%);
+        color: #FF6600;
         font-size: calc(1em + 1vw);
         font-weight: 900;
-        text-shadow:
-            -0.0075em 0.0075em 0 mix(#fff, #530e25, 94%),
-            0.005em 0.005em 0 mix(#fff, #530e25, 60%),
-            0.01em 0.01em 0 mix(#fff, #530e25, 62%),
-            0.015em 0.015em mix(#fff, #530e25, 64%),
-            0.02em 0.02em 0 mix(#fff, #530e25, 66%),
-            0.025em 0.025em 0 mix(#fff, #530e25, 68%),
-            0.03em 0.03em 0 mix(#fff, #530e25, 70%),
-            0.035em 0.035em 0 mix(#fff, #530e25, 72%);
+    
 
         @media screen and (max-width: 600px) {
             position: absolute;
@@ -558,7 +556,7 @@
 
         @media screen and (min-width: 961px) and (max-width: 1280px) {
             position: absolute;
-            top: 160px;
+            top: 110px;
             right: 500px;
             font-size: calc(1em + 2vw);
         }
@@ -566,11 +564,12 @@
 
     .name2 {
         margin-top: 1rem;
+        margin-left: 1rem;
         font-size: 1.5rem;
         font-weight: 600;
-        color: white;
+        color:  #333399;
         letter-spacing: 2px;
-
+        display: flex;
         @media screen and (max-width: 600px) {
             position: absolute;
             top: 0px;
@@ -584,9 +583,9 @@
         margin-top: 1rem;
         font-size: 1.5rem;
         font-weight: 600;
-        color: white;
+        color:  #333399;
         letter-spacing: 2px;
-
+        display: flex;
         @media screen and (max-width: 600px) {
             position: absolute;
             top: 0px;

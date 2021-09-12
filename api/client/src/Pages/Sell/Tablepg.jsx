@@ -21,7 +21,7 @@ import Switch from "@material-ui/core/Switch";
 import DeleteIcon from "@material-ui/icons/Delete";
 import FilterListIcon from "@material-ui/icons/FilterList";
 import { rows, headCells } from "./data";
-import MuiAlert from '@material-ui/lab/Alert';
+import MuiAlert from "@material-ui/lab/Alert";
 import {
   Button,
   FormControl,
@@ -34,7 +34,6 @@ import {
 } from "@material-ui/core";
 import { radianiteP, valorantP } from "../../Assets/icons";
 import axios from "axios";
-
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -274,6 +273,7 @@ export default function EnhancedTable({
   Contact,
   Discord,
   State,
+  value,
 }) {
   const classes = useStyles();
   const [order, setOrder] = React.useState("asc");
@@ -287,19 +287,41 @@ export default function EnhancedTable({
   const [ValorantP, setValorantP] = React.useState(0);
   const [rank, setrank] = React.useState("");
   const [open, setOpen] = React.useState(false);
-
-
+  // const [activeStep1, setActiveStep1] = React.useState(activeStep);
 
   const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
+    if (reason === "clickaway") {
       return;
     }
 
     setOpen(false);
   };
   const handleSubmit = async (e) => {
-    const ffffffffffff = selected.map((eachoneS) => (eachoneS.name = "image"));
+    const ffffffffffff = selected.map((eachoneS) => (
+      <>
+        if(eachoneS.Collection === 'Aristocrat'&& eachoneS.Weapon==='Vandal'){
+  eachoneS.name="v1"
+        } elseif(eachoneS.Collection === 'Aristocrat'&& eachoneS.Weapon==='Vandal'){
+          eachoneS.name="v1"
+        }elseif(eachoneS.Collection === 'Aristocrat'&& eachoneS.Weapon==='Vandal'){
+          eachoneS.name="v1"
+        }elseif(eachoneS.Collection === 'Aristocrat'&& eachoneS.Weapon==='Vandal'){
+          eachoneS.name="v1"
+        }elseif(eachoneS.Collection === 'Aristocrat'&& eachoneS.Weapon==='Vandal'){
+          eachoneS.name="v1"
+        }elseif(eachoneS.Collection === 'Aristocrat'&& eachoneS.Weapon==='Vandal'){
+          eachoneS.name="v1"
+        }elseif(eachoneS.Collection === 'Aristocrat'&& eachoneS.Weapon==='Vandal'){
+          eachoneS.name="v1"
+        }elseif(eachoneS.Collection === 'Aristocrat'&& eachoneS.Weapon==='Vandal'){
+          eachoneS.name="v1"
+        }
+     
+      </>
+    ));
+    // const ffffffffffff = selected.map((eachoneS) => (eachoneS.name = "image"));
     console.log(ffffffffffff, "segesgeg");
+    // setActiveStep1((prevActiveStep) => prevActiveStep + 1);
     // console.log(selected, "gegg");
     e.preventDefault();
     try {
@@ -373,7 +395,7 @@ export default function EnhancedTable({
 
   return (
     <>
-      {!display ? (
+      {!display && value === "Yes" ? (
         <div className={classes.root}>
           <Paper className={classes.paper}>
             <EnhancedTableToolbar numSelected={selected.length} />
@@ -567,11 +589,152 @@ export default function EnhancedTable({
                 Submit for Listing
               </Button>
             )}
-      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="success">
-          Your Account has been successfully Listed !
-        </Alert>
-      </Snackbar>
+            <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+              <Alert onClose={handleClose} severity="success">
+                Your Account has been successfully Listed !
+              </Alert>
+            </Snackbar>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
+      {!display && value === "No" ? (
+        <div className={classes.root}>
+          <div style={{ height: "800px" }} className={classes.bottomstuff}>
+            <FormControl
+              halfWidth
+              style={{ marginTop: "100px" }}
+              className={classes.margin}
+            >
+              <InputLabel htmlFor="standard-adornment-amount">
+                Set Price
+              </InputLabel>
+              <Input
+                id="standard-adornment-amount"
+                value={price}
+                type="number"
+                style={{ height: 30 }}
+                onChange={(e) => setPrice(e.target.value)}
+                startAdornment={
+                  <InputAdornment position="start">₹</InputAdornment>
+                }
+              />
+            </FormControl>
+
+            <FormControl
+              halfWidth
+              style={{ marginTop: "100px" }}
+              className={classes.margin}
+            >
+              <InputLabel htmlFor="standard-adornment-amount">
+                Radianite Points
+              </InputLabel>
+              <Input
+                id="standard-adornment-amount"
+                value={Radianite}
+                type="number"
+                style={{ height: 30 }}
+                onChange={(e) => setRadianite(e.target.value)}
+                startAdornment={
+                  <InputAdornment position="start">
+                    <img src={radianiteP} alt=""></img>
+                  </InputAdornment>
+                }
+              />
+            </FormControl>
+
+            <FormControl
+              halfWidth
+              style={{ marginTop: "100px" }}
+              className={classes.margin}
+            >
+              <InputLabel htmlFor="standard-adornment-amount">
+                Valorant Points
+              </InputLabel>
+              <Input
+                id="standard-adornment-amount"
+                value="0"
+                style={{ height: 30 }}
+                type="number"
+                disabled
+                onChange={(e) => setValorantP(e.target.value)}
+                startAdornment={
+                  <InputAdornment position="start">
+                    <img src={valorantP} alt=""></img>
+                  </InputAdornment>
+                }
+              />
+            </FormControl>
+
+            <FormControl
+              style={{ marginTop: "90px" }}
+              className={classes.formControl}
+            >
+              <InputLabel id="demo-simple-select-label">Rank</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={rank}
+                style={{ height: 40 }}
+                onChange={(e) => setrank(e.target.value)}
+              >
+                <MenuItem value="Unranked">Unranked</MenuItem>
+                <MenuItem value="Iron 1">Iron 1</MenuItem>
+                <MenuItem value="Iron 2">Iron 2</MenuItem>
+                <MenuItem value="Iron 3">Iron 3</MenuItem>
+                <MenuItem value="Bronze 1">Bronze 1</MenuItem>
+                <MenuItem value="Bronze 2">Bronze 2</MenuItem>
+                <MenuItem value="Bronze 3">Bronze 3</MenuItem>
+                <MenuItem value="Silver 1">Silver 1</MenuItem>
+                <MenuItem value="Silver 2">Silver 2</MenuItem>
+                <MenuItem value="Silver 3">Silver 3</MenuItem>
+                <MenuItem value="Gold 1">Gold 1</MenuItem>
+                <MenuItem value="Gold 2">Gold 2</MenuItem>
+                <MenuItem value="Gold 3">Gold 3</MenuItem>
+                <MenuItem value="Platinum 1">Platinum 1</MenuItem>
+                <MenuItem value="Platinum 2">Platinum 2</MenuItem>
+                <MenuItem value="Platinum 3">Platinum 3</MenuItem>
+                <MenuItem value="Diamond 1">Diamond 1</MenuItem>
+                <MenuItem value="Diamond 2">Diamond 2</MenuItem>
+                <MenuItem value="Diamond 3">Diamond 3</MenuItem>
+                <MenuItem value="Immortal1">Immortal1</MenuItem>
+                <MenuItem value="Immortal2">Immortal2</MenuItem>
+                <MenuItem value="Immortal3">Immortal3</MenuItem>
+                <MenuItem value="Radiant">Radiant </MenuItem>
+              </Select>
+            </FormControl>
+
+            {price && Radianite && rank ? (
+              <Button
+                type="submit"
+                halfWidth
+                variant="contained"
+                color="primary"
+                style={{ marginTop: "100px" }}
+                className={classes.submit}
+                onClick={handleSubmit}
+              >
+                Submit for Listing
+              </Button>
+            ) : (
+              <Button
+                style={{ marginTop: "100px" }}
+                type="submit"
+                disabled
+                halfWidth
+                variant="contained"
+                color="primary"
+                className={classes.submit}
+              >
+                Submit for Listing
+              </Button>
+            )}
+            <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+              <Alert onClose={handleClose} severity="success">
+                Your Account has been successfully Listed !
+              </Alert>
+            </Snackbar>
           </div>
         </div>
       ) : (

@@ -3,7 +3,12 @@
   background-image: linear-gradient(to top, #434343, #353535);
   position: relative;
 
-
+  .clicktoscroll{
+    position: absolute;
+    left: 50%;
+    top: 350px;
+    z-index: 99;
+  }
 
 
   section {
@@ -61,16 +66,18 @@
 
   #section07 .span {
     position: absolute;
-
-    bottom: 110px;
-    left: 50%;
-    width: 30px;
+    cursor: pointer;
+    bottom: 150px;
+    left: 43%;
+    width: max-content;
     height: 30px;
     margin-left: -10px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    font-family: Hahmlet;
+    color: yellow;
+    // border-left: 1px solid #fff;
+    // border-bottom: 1px solid #fff;
+    // -webkit-transform: rotate(-45deg);
+    // transform: rotate(-45deg);
     -webkit-animation: sdb07 2s infinite;
     animation: sdb07 2s infinite;
     opacity: 0;
