@@ -271,7 +271,7 @@
 }
 
 #style-2 {
-    background-color: black;
+    background-color: wheat;
     height: 400px;
     margin-top: 50px;
     overflow-y: scroll;
@@ -303,34 +303,36 @@
         display: table;
         //  height: 50%;
         overflow-y: scroll;
-        width: 100%;
+        // width: 250%;
         border: none;
     }
 
     .styled-table {
         font-family: Arial, Helvetica, sans-serif;
         // height: 50%;
-        color: white;
+        color: black;
         border: none;
-        width: 100%;
+        width: 120%;
+       
         // height: 100px;       /* Just for the demo          */
 
 
         tr {
-
+         
+          
             display: table-cell;
             border: none;
             overflow-y: auto;
             /* Trigger vertical scroll    */
             overflow-x: auto;
             /* Hide the horizontal scroll */
-
+            
         }
 
         tr td {
             display: block;
             border: none;
-
+            
         }
 
         td {
@@ -340,9 +342,10 @@
             overflow-y: auto;
             /* Trigger vertical scroll    */
             overflow-x: auto;
-
+          
             /* Hide the horizontal scroll */
             @media screen and (max-width: 600px) {
+
                 padding: 1rem;
 
             }
@@ -355,8 +358,9 @@
             background-color: #a574ff;
             // color: white;
             // border: 1px solid #ddd;
-            font-size: 1.5em;
+            font-size: 1.5rem;
             font-family: Dosis;
+           
 
             @media screen and (max-width: 600px) {
                 width: 100%;
@@ -516,6 +520,7 @@
             position: absolute;
             left: 10px;
             top: 30px;
+
             img {
                 height: 100px;
                 width: 100px;
@@ -529,7 +534,7 @@
 
             img {
                 height: 100px;
-            width: 100px;
+                width: 100px;
             }
         }
     }
@@ -545,7 +550,7 @@
         color: #FF6600;
         font-size: calc(1em + 1vw);
         font-weight: 900;
-    
+
 
         @media screen and (max-width: 600px) {
             position: absolute;
@@ -567,9 +572,10 @@
         margin-left: 1rem;
         font-size: 1.5rem;
         font-weight: 600;
-        color:  #333399;
+        color: #333399;
         letter-spacing: 2px;
         display: flex;
+
         @media screen and (max-width: 600px) {
             position: absolute;
             top: 0px;
@@ -583,9 +589,10 @@
         margin-top: 1rem;
         font-size: 1.5rem;
         font-weight: 600;
-        color:  #333399;
+        color: #333399;
         letter-spacing: 2px;
         display: flex;
+
         @media screen and (max-width: 600px) {
             position: absolute;
             top: 0px;
