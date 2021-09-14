@@ -15,7 +15,7 @@ import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import Topbar from "../Components/Topbar";
 import Bottombar from "../Components/Bottombar";
 import { Link } from "react-router-dom";
-import InstagramIcon from '@material-ui/icons/Instagram';
+import InstagramIcon from "@material-ui/icons/Instagram";
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
@@ -23,9 +23,7 @@ const useStyles = makeStyles((theme) => ({
       width: "25ch",
     },
   },
-  contactcontain: {
-    margin: "40px",
-  },
+
   button: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
@@ -36,15 +34,13 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
     marginLeft: theme.spacing(1),
     width: "100%",
-   fontSize: "18px",
-   "&:hover": {
- 
-    borderColor: "green",
-   
-},
-[theme.breakpoints.up('md')]: {
-  width: "80%",
-},
+    fontSize: "18px",
+    "&:hover": {
+      borderColor: "green",
+    },
+    [theme.breakpoints.up("md")]: {
+      width: "80%",
+    },
     [theme.breakpoints.down("sm")]: {
       width: "85%",
     },
@@ -65,9 +61,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       marginLeft: theme.spacing(5),
       width: "95px",
-      
     },
-    
   },
   rtxtt: {
     marginLeft: theme.spacing(3),
@@ -89,12 +83,11 @@ const useStyles = makeStyles((theme) => ({
   margin: {
     margin: theme.spacing(1),
   },
-  icon : {
+  icon: {
     [theme.breakpoints.down("sm")]: {
-     display : "none"
+      display: "none",
     },
-  }
-
+  },
 }));
 const CssTextField = withStyles({
   root: {
@@ -118,82 +111,90 @@ const CssTextField = withStyles({
   },
 })(TextField);
 export default function Contact() {
-  const [Name, setName] = useState('');
-  const [Subject, setSubject] = useState('');
-  const [email, setemail] = useState('');
-  const [Contact, setContact] = useState('');
-  const [Message, setMessage] = useState('');
+  const [Name, setName] = useState("");
+  const [Subject, setSubject] = useState("");
+  const [email, setemail] = useState("");
+  const [Contact, setContact] = useState("");
+  const [Message, setMessage] = useState("");
   const classes = useStyles();
   return (
-    <>
+    <div className="contactpg">
       <Topbar />
       <div className="contactcontainer">
-       
-        
-            <div className="contact-left">
-              <Typography className={classes.titleee} variant="h4" gutterBottom>
-                Send us a message
-              </Typography>
+        <div className="contact-left">
+          <Typography className={classes.titleee} variant="h4" gutterBottom>
+            Send us a message
+          </Typography>
 
-              <form className={classes.root} noValidate autoComplete="off" action="https://formsubmit.co/officialvaloempire@gmail.com" method="POST">
-                <CssTextField
-                  className={classes.margin}
-                  label="Name"
-                  variant="outlined"
-                  type="text"
-                  name="name"
-                  onChange={ e => setName(e.target.value)}
-                  id="custom-css-outlined-input"
-                />
-                <CssTextField
-                  className={classes.margin}
-                  label="Email"
-                  variant="outlined"
-                  type="email"
-                  name="email"
-                  id="custom-css-outlined-input"
-                  onChange={ e => setemail(e.target.value)}
-                />
-                <CssTextField
-                  className={classes.margin}
-                  label="Subject"
-                  variant="outlined"
-                  type="text"
-                  name="_subject"
-                  id="custom-css-outlined-input"
-                  onChange={ e => setSubject(e.target.value)}
-                />
-                <CssTextField
-                  className={classes.margin}
-                  label="Contact No."
-                  variant="outlined"
-                  name="contactNo"
-                  defaultValue="NA"
-                  type="number"
-                  id="custom-css-outlined-input"
-                  onChange={ e => setContact(e.target.value)}
-                />
+          <form
+            className={classes.root}
+            noValidate
+            autoComplete="off"
+            action="https://formsubmit.co/officialvaloempire@gmail.com"
+            method="POST"
+          >
+            <CssTextField
+              className={classes.margin}
+              label="Name"
+              variant="outlined"
+              type="text"
+              name="name"
+              onChange={(e) => setName(e.target.value)}
+              id="custom-css-outlined-input"
+            />
+            <CssTextField
+              className={classes.margin}
+              label="Email"
+              variant="outlined"
+              type="email"
+              name="email"
+              id="custom-css-outlined-input"
+              onChange={(e) => setemail(e.target.value)}
+            />
+            <CssTextField
+              className={classes.margin}
+              label="Subject"
+              variant="outlined"
+              type="text"
+              name="_subject"
+              id="custom-css-outlined-input"
+              onChange={(e) => setSubject(e.target.value)}
+            />
+            <CssTextField
+              className={classes.margin}
+              label="Contact No."
+              variant="outlined"
+              name="contactNo"
+              defaultValue="NA"
+              type="tel"
+              id="custom-css-outlined-input"
+              onChange={(e) => setContact(e.target.value)}
+            />
 
-                <TextareaAutosize
-                  className={classes.txtarea}
-                  aria-label="minimum height"
-                  name="Message"
-                  minRows={7}
-                  placeholder="Message"
-                  onChange={ e => setMessage(e.target.value)}
-                />
-                <input type="hidden" name="_autoresponse" value="Thank You ,Our team will contact you soon"/>
-           
-           {Name&&Subject&&email&&Contact&&Message ?
+            <TextareaAutosize
+              className={classes.txtarea}
+              aria-label="minimum height"
+              name="Message"
+              minRows={7}
+              placeholder="Message"
+              onChange={(e) => setMessage(e.target.value)}
+            />
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="Thank You ,Our team will contact you soon"
+            />
+
+            {Name && Subject && email && Contact && Message ? (
               <Button
-                type ="submit"
+                type="submit"
                 variant="contained"
                 color="primary"
                 className={classes.button}
               >
                 Send
               </Button>
-              :
+            ) : (
               <Button
                 variant="contained"
                 color="primary"
@@ -202,100 +203,89 @@ export default function Contact() {
               >
                 Send
               </Button>
+            )}
+          </form>
+        </div>
 
-           }
-              </form>
-            </div>
-         
-
-        
-          
-              <div className="contact-right">
-                <div className="crl">
-                  <Typography variant="h4" gutterBottom>
-                    Contact Us
-                  </Typography>
-                  <Typography
-                    className={classes.weareopen}
-                    variant="body4"
-                    gutterBottom
-                  >
-                    We are open for any suggestion or just to have a chat.
-                  </Typography>
-                </div>
-                <div className="crr">
-                  <Typography
-                    className={classes.rtxt}
-                    variant="body4"
-                    gutterBottom
-                  >
-                    <EmailIcon className={classes.icon} />
-                    <Typography
-                      className={classes.rtxtt}
-                      variant="body4"
-                      gutterBottom
-                    >
-                      Email :
-                    </Typography>
-                    <Typography
-                      className={classes.rtxt1}
-                      variant="body4"
-                      gutterBottom
-                    >
-                      officialvaloempire@gmail.com
-                    </Typography>
-                  </Typography>
-                  <Typography
-                    className={classes.rtxt}
-                    variant="body4"
-                    gutterBottom
-                  >
-                   <i className="fab fa-discord dcicon"></i>
-                    <Typography
-                      className={classes.rtxtt}
-                      variant="body4"
-                      gutterBottom
-                    >
-                      Discord :
-                    </Typography>
-                    <Typography
-                      className={classes.rtxt1}
-                      variant="body4"
-                      gutterBottom
-                    >
-                       <a href="https://discord.gg/2cpY32mU" style={{textDecoration: "none",color: "#CFC5C5"}}>discord.gg/2cpY32mU</a>
-                    </Typography>
-                  </Typography>
-                  <Typography
-                    className={classes.rtxt}
-                    variant="body4"
-                    gutterBottom
-                  >
-                    <InstagramIcon className={classes.icon} />
-                    <Typography
-                      className={classes.rtxtt}
-                      variant="body4"
-                      gutterBottom
-                    >
-                      Instagram :
-                    </Typography>
-                    <Typography
-                      className={classes.rtxt1}
-                      variant="body4"
-                      gutterBottom
-                    >
-                    <a href="https://www.instagram.com/valoempire/" style={{textDecoration: "none",color: "#CFC5C5"}}>instagram.com/valoempire</a>
-                    </Typography>
-                  </Typography>
-                </div>
-              </div>
-          
-             
-      
+        <div className="contact-right">
+          <div className="crl">
+            <Typography variant="h4" gutterBottom>
+              Contact Us
+            </Typography>
+            <Typography
+              className={classes.weareopen}
+              variant="body4"
+              gutterBottom
+            >
+              We are open for any suggestion or just to have a chat.
+            </Typography>
+          </div>
+          <div className="crr">
+            <Typography className={classes.rtxt} variant="body4" gutterBottom>
+              <EmailIcon className={classes.icon} />
+              <Typography
+                className={classes.rtxtt}
+                variant="body4"
+                gutterBottom
+              >
+                Email :
+              </Typography>
+              <Typography
+                className={classes.rtxt1}
+                variant="body4"
+                gutterBottom
+              >
+                officialvaloempire@gmail.com
+              </Typography>
+            </Typography>
+            <Typography className={classes.rtxt} variant="body4" gutterBottom>
+              <i className="fab fa-discord dcicon"></i>
+              <Typography
+                className={classes.rtxtt}
+                variant="body4"
+                gutterBottom
+              >
+                Discord :
+              </Typography>
+              <Typography
+                className={classes.rtxt1}
+                variant="body4"
+                gutterBottom
+              >
+                <a
+                  href="https://discord.gg/2cpY32mU"
+                  style={{ textDecoration: "none", color: "#CFC5C5" }}
+                >
+                  discord.gg/2cpY32mU
+                </a>
+              </Typography>
+            </Typography>
+            <Typography className={classes.rtxt} variant="body4" gutterBottom>
+              <InstagramIcon className={classes.icon} />
+              <Typography
+                className={classes.rtxtt}
+                variant="body4"
+                gutterBottom
+              >
+                Instagram :
+              </Typography>
+              <Typography
+                className={classes.rtxt1}
+                variant="body4"
+                gutterBottom
+              >
+                <a
+                  href="https://www.instagram.com/valoempire/"
+                  style={{ textDecoration: "none", color: "#CFC5C5" }}
+                >
+                  instagram.com/valoempire
+                </a>
+              </Typography>
+            </Typography>
+          </div>
+        </div>
       </div>
-      <Bottombar/>
-     
-     
-    </>
+      <Bottombar />
+    </div>
   );
 }

@@ -1,109 +1,96 @@
-.fondo {
+.faqpg {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  .fondo {
+    flex-grow: 1;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to top , #434343, #353535);
+    background-image: linear-gradient(to top, #434343, #353535);
     padding: 130px 0;
 
     .cuerpo {
-        width: 85%;
-        height: 80rem;
-        background: white;
-        border-radius: 20px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 15px 15px 15px;
+      width: 85%;
+      height: 50rem;
+      background: white;
+      border-radius: 20px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 15px 15px 15px;
 
-        @media only screen and (max-width: 600px) {
-            padding: auto;
-            height: 100%;
+      @media only screen and (max-width: 600px) {
+        padding: auto;
+        height: 100%;
+      }
+
+      .img {
+        width: 200px;
+        position: relative;
+        top: -90px;
+        filter: drop-shadow(0 25px 0px #e1d6f6);
+      }
+
+      .titulo {
+        text-align: center;
+        color: #a574ff;
+        font-size: 35px;
+        font-weight: 700;
+        font-family: Hahmlet;
+      }
+
+      .item {
+        border-bottom: 1px solid #e6e6e9;
+        height: 13 rem;
+        width: 60vw;
+
+        .item_header {
+          align-items: center;
+          position: relative;
+          z-index: 2;
+
+          .icon {
+            color: hsl(14, 88%, 65%);
+            transition: transform 1s;
+          }
+
+          p {
+            margin-top: 0px;
+            // font-family: DINNextW1G;
+
+            font-size: 40%;
+            font-family: Rubik;
+
+            font-weight: none;
+            color: rgba(36, 0, 0, 1);
+            // font-style: italic;
+          }
+
+          h4 {
+            font-size: 40px;
+          }
+
+          .pregunta-a {
+            color: hsl(237, 12%, 33%);
+            display: inline-block;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            font-family: Apercu;
+          }
+
+          .pregunta-q {
+            color: #cd30c0;
+            display: inline-block;
+            font-weight: 500;
+            font-size: 20px;
+            padding: 1rem 0;
+            font-weight: bolder;
+          }
         }
-
-        .img {
-            width: 200px;
-            position: relative;
-            top: -90px;
-            filter: drop-shadow(0 25px 0px #E1D6F6);
-        }
-
-
-
-        .titulo {
-            text-align: center;
-            color: #a574ff;
-            font-size: 45px;
-            font-weight: 700;
-            font-family: Hahmlet;
-
-
-        }
-
-        .item {
-            border-bottom: 1px solid #E6E6E9;
-            height: 13 rem;
-            width: 60vw;
-
-
-            .item_header {
-
-
-
-                align-items: center;
-                position: relative;
-                z-index: 2;
-
-
-                .icon {
-                    color: hsl(14, 88%, 65%);
-                    transition: transform 1s;
-                }
-
-
-                p {
-                    margin-top: 0px;
-                    // font-family: DINNextW1G;
-
-                    font-size: 40%;
-                    font-family: Rubik;
-                    
-                    font-weight: none;
-                    color:rgba(36,0,0,1);
-                    // font-style: italic;
-                }
-
-                h4 {
-                    font-size: 40px;
-                }
-
-
-                .pregunta-a {
-                    color: hsl(237, 12%, 33%);
-                    display: inline-block;
-                    font-weight: 500;
-                    font-size: 25px;
-                    padding: 1rem 0;
-                    margin-bottom: 2rem;
-                    font-family:Apercu;
-
-                }
-
-
-                .pregunta-q {
-                    color: #cd30c0;
-                    display: inline-block;
-                    font-weight: 500;
-                    font-size: 40px;
-                    padding: 1rem 0;
-                    font-weight: bolder;
-
-                }
-
-            }
-        }
-
-
-
+      }
     }
-
+  }
 }

@@ -13,10 +13,10 @@ const useStyles = makeStyles((theme) => ({
  },
 
  rtxtt :{
-  padding: theme.spacing(3),
+  padding: theme.spacing(1),
   fontFamily: "Hahmlet",
   color : "#CFC5C5",
-  fontSize : "24px",
+  fontSize : "12px",
   marginBottom : "0px",
  }
 
@@ -30,7 +30,7 @@ export default function Bottombar() {
    
      
        
-          <div style={{width:"100%" ,backgroundColor:"#353535",}}className={classes.middle}>
+          <div style={{width:"100%" ,height:"40px",backgroundColor:"#353535",}}className={classes.middle}>
          
           <Typography
                       className={classes.rtxtt}

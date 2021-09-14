@@ -4,14 +4,13 @@ import Topbar from "../../Components/Topbar";
 import "./buy.scss";
 import axios from "axios";
 import Card from "./Card";
-import {  phegif, phegif2 } from "../../Assets/icons";
+import { phegif, phegif2, bannerleft, bannerright } from "../../Assets/icons";
 import "tachyons";
 import { Link } from "react-scroll";
 import { AppBar, Box, Tab, Tabs, Typography } from "@material-ui/core";
-import PropTypes from 'prop-types';
-import SwipeableViews from 'react-swipeable-views';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { createTheme } from '@material-ui/core/styles';
+import PropTypes from "prop-types";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { createTheme } from "@material-ui/core/styles";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -42,17 +41,17 @@ TabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `full-width-tab-${index}`,
-    'aria-controls': `full-width-tabpanel-${index}`,
+    "aria-controls": `full-width-tabpanel-${index}`,
   };
 }
 
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "#353535",
-    width: '100%',
-    position: 'relative',
-    zIndex:3,
-    display: ''
+    width: "100%",
+    position: "relative",
+    zIndex: 3,
+    display: "",
   },
 }));
 
@@ -67,23 +66,29 @@ export default function Buy() {
   const switchrank = (valuee) => {
     switch (valuee) {
       case 0:
-        return <section id="caard">
-        {allCard.map((eachcard) => (
-          <Card eachcard={eachcard} />
-        )) }
-        </section>
-         case 2:
-          return <section id="caard">
-          {skinCard.map((eachcard) => (
-            <Card eachcard={eachcard} />
-          )) }
+        return (
+          <section id="caard">
+            {allCard.map((eachcard) => (
+              <Card eachcard={eachcard} />
+            ))}
           </section>
-           case 1:
-            return <section id="caard">
+        );
+      case 2:
+        return (
+          <section id="caard">
+            {skinCard.map((eachcard) => (
+              <Card eachcard={eachcard} />
+            ))}
+          </section>
+        );
+      case 1:
+        return (
+          <section id="caard">
             {rankCard.map((eachcard) => (
               <Card eachcard={eachcard} />
-            )) }
-            </section>
+            ))}
+          </section>
+        );
       default:
         break;
     }
@@ -119,44 +124,64 @@ export default function Buy() {
   }, []);
 
   return (
-    <>
+    <div className="sellpg">
       <Topbar />
-      <div className="buy ">
-        <section id="section07" className="demo">
-          <div className="box">
-            <div className="content">
-              <img className="bann1" src={phegif2} alt="Banner" />
-              <div className="contentbanner">
-                <h1> Select</h1>
-                <h2> Connect</h2>
-                <h3> Buy !</h3>
+      <div className="container">
+        <div className="buy ">
+          <section id="section07" className="demo">
+            <div className="box">
+              <div className="content">
+                <div>
+                  {" "}
+                  <img className="bann1" src={bannerleft} alt="Banner" />
+                </div>
+                <div className="contentbanner">
+                  <h1> Select</h1>
+                  <h1> Connect</h1>
+                  <h1> Buy !</h1>
+                </div>
+                <div>
+                  {" "}
+                  <img className="bann" src={bannerright} alt="Banner" />
+                </div>
               </div>
-              <img className="bann" src={phegif} alt="Banner" />
             </div>
-          </div>
-        
-          <div className="scroll">
-            <Link className="span" to="caard" spy={true} smooth={true}>Click here to Visit Store</Link>
-            {/* <Link className="span" to="caard" spy={true} smooth={true}></Link>
+
+            <div className="scroll">
+              <Link className="span" to="caard" spy={true} smooth={true}>
+                Click here to Visit Store
+              </Link>
+              {/* <Link className="span" to="caard" spy={true} smooth={true}></Link>
             <Link className="span" to="caard" spy={true} smooth={true}></Link> */}
-          </div>
-        
-        </section>
-        <div className={classes.root}>
-      <AppBar position="static"style={{color:"white"}} color="white">
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          indicatorColor="secondary"
-          textColor="secondary"
-          variant="fullWidth"
-        >
-          <Tab style={{color :"white", backgroundColor: "#353535"}} label="All" {...a11yProps(0)} />
-          <Tab style={{ color :"white",backgroundColor: "#353535"}}label="Rank Accounts" {...a11yProps(1)} />
-          <Tab style={{ color :"white",backgroundColor: "#353535"}}label="Skins" {...a11yProps(2)} />
-        </Tabs>
-      </AppBar>
-      {/* <SwipeableViews
+            </div>
+          </section>
+          <div className={classes.root}>
+            <AppBar position="static" style={{ color: "white" }} color="white">
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                indicatorColor="secondary"
+                textColor="secondary"
+                variant="fullWidth"
+              >
+                <Tab
+                  style={{ color: "white", backgroundColor: "#353535" }}
+                  label="All"
+                  {...a11yProps(0)}
+                />
+                <Tab
+                  style={{ color: "white", backgroundColor: "#353535" }}
+                  label="Rank Accounts"
+                  {...a11yProps(1)}
+                />
+                <Tab
+                  style={{ color: "white", backgroundColor: "#353535" }}
+                  label="Skins"
+                  {...a11yProps(2)}
+                />
+              </Tabs>
+            </AppBar>
+            {/* <SwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={value}
         onChangeIndex={handleChangeIndex}
@@ -171,15 +196,13 @@ export default function Buy() {
         Skins
         </TabPanel>
       </SwipeableViews> */}
-    </div>
- 
-        <section id="caard">
-      
-        {switchrank(value)}
-        </section>
+          </div>
+
+          <section id="caard">{switchrank(value)}</section>
+        </div>
       </div>
       <Bottombar />
-    </>
+    </div>
   );
 }
 // {/* <section id="caard">

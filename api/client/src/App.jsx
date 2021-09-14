@@ -11,7 +11,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Sell from "./Pages/Sell/Sell";
 import Buy from "./Pages/Buy/Buy.jsx";
 
-
 export default function App() {
   return (
     <div className="app">
@@ -31,11 +30,11 @@ export default function App() {
             <Faq />
           </Route>
           <Route path="/sell">
-         <Sell/>
-        </Route>
-        <Route path="/buy">
-          <Buy />
-        </Route>
+            <Sell />
+          </Route>
+          <Route path="/buy">
+            <Buy />
+          </Route>
         </Switch>
       </Router>
     </div>

@@ -407,18 +407,18 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     height: "100px",
-    width: "65vw",
+    width: "85vw",
     margin: "auto",
     marginTop: "0px",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       overflowX: "scroll",
-      height: "100vh",
+      height: "80vh",
     },
     "@media screen and (min-width: 961px) and (max-width: 1280px)": {
       width: "100%",
-      overflowX: "scroll",
-      height: "100vh",
+      // overflowX: "scroll",
+      height: "60vh",
     },
     // [theme.breakpoints.between('md', 'lg')]: {
     //   width: "100%",
@@ -427,21 +427,22 @@ const useStyles = makeStyles((theme) => ({
     // },
   },
   paper: {
-    backgroundColor: "white",
+    backgroundColor: "#fao5656076",
+
     // backgroundColor: theme.palette.background.paper,
-    border: "2px solid #000",
-    boxShadow: theme.shadows[5],
-    width: "65vw",
+    // border: "2px solid #000",
+    // boxShadow: theme.shadows[5],
+    width: "85vw",
     padding: theme.spacing(2, 4, 3),
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       overflowX: "scroll",
-      height: "100vh",
+      height: "80vh",
     },
     "@media screen and (min-width: 961px) and (max-width: 1280px)": {
       width: "100%",
-      overflowX: "scroll",
-      height: "100vh",
+      // overflowX: "scroll",
+      height: "60vh",
     },
     // [theme.breakpoints.between('md', 'lg')]: {
     //   width: "100%",
@@ -450,6 +451,7 @@ const useStyles = makeStyles((theme) => ({
     // },
   },
   button: {
+    position: "absolute",
     backgroundColor: "#FF4130",
     color: "white",
     height: "3.5rem",
@@ -465,13 +467,13 @@ const useStyles = makeStyles((theme) => ({
 
     [theme.breakpoints.down("sm")]: {
       position: "absolute",
-      bottom: "120px",
-      left: "30px",
+      // bottom: "120px",
+      // left: "30px",
     },
     "@media screen and (min-width: 961px) and (max-width: 1280px)": {
       position: "absolute",
-      bottom: "120px",
-      left: "30px",
+      // bottom: "120px",
+      // left: "30px",
     },
   },
   button2: {
@@ -548,7 +550,7 @@ const useStyles = makeStyles((theme) => ({
     top: "5px",
     cursor: "pointer",
     fontSize: "30px",
-    color: "black",
+    color: "red",
     opacity: "0.5",
     "&:hover": {
       opacity: "1",
@@ -1330,6 +1332,21 @@ export default function Card({ eachcard }) {
         <div className="info">
           <div className="circle"></div>
           <div className="tag">₹ {eachcard.Price}</div>
+          <div >
+          <a
+                  style={{ textDecoration: "none" }}
+                  href="https://www.instagram.com/valoempire/"
+                >
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className={classes.button}
+                    endIcon={<InstagramIcon>Buy</InstagramIcon>}
+                  >
+                    Buy
+                  </Button>
+                </a>
+                </div>
           <div className="skins">
             Total Skins Owned: {eachcard.selected.length}
           </div>
@@ -1366,14 +1383,14 @@ export default function Card({ eachcard }) {
               </div>
             </div>
           </div>
-          <button
+         {eachcard.selected.length? <button
             onClick={() => {
               handleOpen();
             }}
             className="details"
           >
-            DETAILS
-          </button>{" "}
+            View Skins
+          </button>:""} 
         </div>
         <div className="Photo"> {switchrank(eachcard.Rank)}</div>
         <div className="buttonnn black">{eachcard.DisplayName}</div>
@@ -1392,9 +1409,8 @@ export default function Card({ eachcard }) {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <div className="uppermodal">
-              {/* <div className="circle"></div> */}
-              {/* <div className="tag">₹ {eachcard.Price}</div> */}
+            {/* <div className="uppermodal">
+            
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <div className="name3">
                   <Button
@@ -1460,7 +1476,7 @@ export default function Card({ eachcard }) {
                   </Button>
                 </a>
               </div>
-            </div>
+            </div> */}
             <CancelIcon
               className={classes.cancel}
               onClick={handleClose}
@@ -1473,11 +1489,11 @@ export default function Card({ eachcard }) {
                   className="styled-table"
                   border="none"
                 >
-                  <tr style={{marginTop:"200px"}}>
+                  <tr>
                     <td className="captionss">Skins</td>
                     {eachcard.selected.map((home) => (
                       <td
-                        className={classes.namecell}
+                        // className={classes.namecell}
                       >
                         {switchimage(home.name)}
                       </td>

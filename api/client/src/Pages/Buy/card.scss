@@ -1,615 +1,600 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis:700);
 
 .box {
-    font-family: Dosis;
-
+  font-family: Dosis;
 }
 
 .card {
-    height: 450px;
-    width: 310px;
-    background-color: white;
-    transform: scale(0.7);
-    border-radius: 8px;
-    box-shadow: 0 0 80px 1px rgba(9, 9, 121, 1);
-    position: relative;
-    z-index: 2;
-
-    .info {
-        .circle {
-            position: absolute;
-            background-color: white;
-            border: 3px solid black;
-            border-radius: 18px;
-            box-shadow: 0 0 2px #888;
-            height: 30px;
-            width: 30px;
-            left: 20px;
-
-        }
-
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        opacity: 1;
-
-
-        .tag {
-            display: inline-block;
-
-            width: auto;
-            height: 38px;
-            background: linear-gradient(90deg, rgba(36, 0, 0, 1) 0%, rgba(9, 9, 121, 1) 31%, rgba(0, 212, 255, 1) 100%);
-            -webkit-border-radius: 3px 4px 4px 3px;
-            -moz-border-radius: 3px 4px 4px 3px;
-            border-radius: 3px 4px 4px 3px;
-
-            border-left: 1px solid #979797;
-            transform: rotate(90deg);
-            /* This makes room for the triangle */
-            margin-left: -240px;
-            margin-top: 3.5rem;
-            position: relative;
-
-            color: white;
-            font-weight: 300;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 22px;
-            line-height: 38px;
-
-            padding: 0 10px 0 10px;
-        }
-
-        /* Makes the triangle */
-        .tag:before {
-            transform: rotate(0deg);
-            content: "";
-            position: absolute;
-            display: block;
-            left: -19px;
-            width: 0;
-            height: 0;
-            border-top: 19px solid transparent;
-            border-bottom: 19px solid transparent;
-            border-right: 19px solid rgba(36, 0, 0, 1);
-        }
-
-        /* Makes the circle */
-        .tag:after {
-            transform: rotate(90deg);
-            content: "";
-            background-color: white;
-            border-radius: 50%;
-            width: 6px;
-            height: 6px;
-            display: block;
-            position: absolute;
-            left: -9px;
-            top: 15px;
-        }
-
-        .skins {
-
-            position: absolute;
-            font-size: 25px;
-            margin: 6rem 0;
-
-
-            color: #555555;
-            top: 140px;
-            letter-spacing: 2px;
-
-        }
-
-        .divider {
-
-            height: 1.5px;
-            width: 50px;
-            position: absolute;
-
-            top: 190px;
-
-        }
-
-        .bio {
-            position: absolute;
-            top: 220px;
-            color: #949594;
-            line-height: 28px;
-            font-size: 18px;
-            text-align: center;
-            margin-top: 5rem;
-
-
-        }
-
-
-
-
-
-
-    }
-
-    .Photo {
-        height: 50%;
-        width: 100%;
-        background-image: url(https://c.tenor.com/lTn_Gj0ljzYAAAAd/jett-valorant.gif);
-        background-repeat: no-repeat;
-        position: absolute;
-        bottom: 90px;
-        background-size: 100% 100%;
-        border-radius: 8px;
-        transition: 1.6s;
-
-        img {
-            margin-left: auto;
-            margin-right: auto;
-            display: none;
-        }
-    }
-
-
-    $separator-size: 5px;
-    $separator-border-style: solid;
-    $separator-border-color: red;
-    $separator-space-top: 25px;
-    $separator-space-bottom: 80px;
-
-
-
-
-
-    @mixin dot {
-        $dot-size: 12px;
-        content: "";
-        background-color: $separator-border-color;
-        display: block;
-        height: $dot-size;
-        width: $dot-size;
-        border-radius: 50%;
-    }
-
-    .separator--dots {
-        position: absolute;
-        z-index: 0;
-        left: 18px;
-        overflow: visible;
-        border: 0;
-        @include dot();
-        position: relative;
-
-        &:before {
-            @include dot();
-            position: absolute;
-            left: -32px;
-            animation: dot-move-left 1s ease-out forwards;
-        }
-
-        &:after {
-            @include dot();
-            position: absolute;
-            left: 32px;
-            animation: dot-move-right 1s ease-out forwards;
-        }
-    }
-
-
-
-
-}
-
-
-.card:hover .Photo {
-
-    transform: scale(1, 1) translateY(-120px);
-    background-image: none;
-    // margin-left:115px;
-
-    // border-radius: 100%;
-    // background-size: 100% 150% ;
-
-    // background-position: 0 -25px ;
-    img {
-        height: 120px;
-        width: 120px;
-        position: relative;
-        display: flex;
-
-
-
-    }
-
-
-}
-
-.card:hover .info {
-    opacity: 1;
-}
-
-.details {
-    position: absolute;
-    // bottom: -70px;
-    bottom: 30px;
-    font-size: 30px;
-    // background-color: #a574ff;
-    color: #f48fb1;
-    width: 80%;
-    padding: 12px 0;
-    font-weight: 600;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 10px;
-    border: none;
-
-}
-
-.details:hover {
-    background-color: #681430;
-    cursor: pointer;
-}
-
-.buttonnn {
-    position: absolute;
-
-    text-align: center;
-    // bottom: 30px;
-    width: 100%;
-    border-radius: 10px;
-    bottom: -70px;
-
-
-    background-color: white;
-
-    border: none;
-    font-size: 30px;
-    color: #a574ff;
-    padding: 13px 25px;
-    cursor: pointer;
-
-
-}
-
-#style-2 {
-    background-color: wheat;
-    height: 400px;
-    margin-top: 50px;
-    overflow-y: scroll;
-    padding-right: 0px;
-
-    @media screen and (max-width: 600px) {
-        width: 700px;
-        margin-left: -35px;
-        margin-top: 150px;
-    }
-
-    @media screen and (min-width: 601px) and (max-width: 960px) {
-        width: 110%;
-        height: 600px;
-        margin-left: -35px;
-    }
-
-    @media screen and (min-width: 961px) and (max-width: 1280px) {
-        width: 100%;
-        margin-left: -0px;
-        margin-top: 150px;
-        height: 800px;
-    }
-
-
-
-
-    table {
-        display: table;
-        //  height: 50%;
-        overflow-y: scroll;
-        // width: 250%;
-        border: none;
-    }
-
-    .styled-table {
-        font-family: Arial, Helvetica, sans-serif;
-        // height: 50%;
-        color: black;
-        border: none;
-        width: 120%;
-       
-        // height: 100px;       /* Just for the demo          */
-
-
-        tr {
-         
-          
-            display: table-cell;
-            border: none;
-            overflow-y: auto;
-            /* Trigger vertical scroll    */
-            overflow-x: auto;
-            /* Hide the horizontal scroll */
-            
-        }
-
-        tr td {
-            display: block;
-            border: none;
-            
-        }
-
-        td {
-            // border: 1px solid #ddd;
-            border: none;
-            padding: 2rem;
-            overflow-y: auto;
-            /* Trigger vertical scroll    */
-            overflow-x: auto;
-          
-            /* Hide the horizontal scroll */
-            @media screen and (max-width: 600px) {
-
-                padding: 1rem;
-
-            }
-        }
-
-        .captionss {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color: #a574ff;
-            // color: white;
-            // border: 1px solid #ddd;
-            font-size: 1.5rem;
-            font-family: Dosis;
-           
-
-            @media screen and (max-width: 600px) {
-                width: 100%;
-            }
-        }
-    }
-}
-
-/* Scrollbar Styling */
-#style-2::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    background-color: black;
-}
-
-#style-2::-webkit-scrollbar {
-    width: 12px;
-    background-color: black;
-}
-
-#style-2::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: #a574ff;
-}
-
-.uppermodal {
-    display: flex;
-    justify-content: space-around;
-
+  height: 450px;
+  width: 310px;
+  background-color: white;
+  transform: scale(0.7);
+  border-radius: 8px;
+  box-shadow: 0px 11px 15px -7px rgba(42, 23, 126, 0.2),
+    0px 24px 38px 3px rgba(42, 23, 126, 0.2),
+    0px 9px 46px 8px rgba(42, 23, 126, 0.2);
+  position: relative;
+  z-index: 2;
+
+  .info {
     .circle {
-        position: absolute;
-        background-color: white;
-        border: 3px solid black;
-        border-radius: 18px;
-        box-shadow: 0 0 2px #888;
-        height: 30px;
-        width: 30px;
-        left: 20px;
-
+      position: absolute;
+      background-color: white;
+      border: 3px solid black;
+      border-radius: 18px;
+      box-shadow: 0 0 2px #888;
+      height: 30px;
+      width: 30px;
+      left: 20px;
     }
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
 
     .tag {
-        display: inline-block;
+      display: inline-block;
 
-        width: auto;
-        height: 38px;
-        background: rgb(36, 0, 0);
-        background: linear-gradient(90deg, rgba(36, 0, 0, 1) 0%, rgba(93, 9, 121, 1) 29%, rgba(89, 40, 108, 1) 59%, rgba(86, 67, 97, 1) 86%, rgba(0, 212, 255, 1) 100%);
-        -webkit-border-radius: 3px 4px 4px 3px;
-        -moz-border-radius: 3px 4px 4px 3px;
-        border-radius: 3px 4px 4px 3px;
+      width: auto;
+      height: 38px;
+      background: linear-gradient(
+        90deg,
+        rgba(36, 0, 0, 1) 0%,
+        rgba(9, 9, 121, 1) 31%,
+        rgba(0, 212, 255, 1) 100%
+      );
+      -webkit-border-radius: 3px 4px 4px 3px;
+      -moz-border-radius: 3px 4px 4px 3px;
+      border-radius: 3px 4px 4px 3px;
 
-        border-left: 1px solid #979797;
-        transform: rotate(90deg);
-        /* This makes room for the triangle */
-        margin-left: -80px;
-        margin-top: 2.5rem;
-        position: relative;
-        margin-bottom: 2rem;
-        color: white;
-        font-weight: 300;
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 22px;
-        line-height: 38px;
+      border-left: 1px solid #979797;
+      transform: rotate(90deg);
+      /* This makes room for the triangle */
+      margin-left: -240px;
+      margin-top: 3.5rem;
+      position: relative;
 
-        padding: 0 10px 0 10px;
+      color: white;
+      font-weight: 300;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 22px;
+      line-height: 38px;
 
-        @media screen and (max-width: 600px) {
-            position: absolute;
-            bottom: 100px;
-            right: 40px;
-            transform: rotate(0deg);
-        }
-
-        @media screen and (min-width: 601px) and (max-width: 960px) {
-            position: absolute;
-            bottom: 100px;
-            right: 70px;
-            transform: rotate(0deg);
-            height: 58px;
-            font-size: 42px;
-            padding-top: 0.5rem;
-        }
-
-        @media screen and (min-width: 961px) and (max-width: 1280px) {
-            position: absolute;
-            bottom: 100px;
-            right: 70px;
-            transform: rotate(0deg);
-            height: 58px;
-            font-size: 42px;
-            padding-top: 0.5rem;
-        }
+      padding: 0 10px 0 10px;
     }
 
     /* Makes the triangle */
     .tag:before {
-        transform: rotate(0deg);
-        content: "";
-        position: absolute;
-        display: block;
-        left: -19px;
-        width: 0;
-        height: 0;
-
-        border-top: 19px solid transparent;
-        border-bottom: 19px solid transparent;
-        border-right: 19px solid white;
-
-        @media screen and (min-width: 601px) and (max-width: 960px) {
-            border-top: 29px solid transparent;
-            border-bottom: 29px solid transparent;
-            border-right: 29px solid white;
-            left: -30px;
-            bottom: 0px;
-        }
-
-        @media screen and (min-width: 961px) and (max-width: 1280px) {
-            border-top: 29px solid transparent;
-            border-bottom: 29px solid transparent;
-            border-right: 29px solid white;
-            left: -30px;
-            bottom: 0px;
-        }
+      transform: rotate(0deg);
+      content: "";
+      position: absolute;
+      display: block;
+      left: -19px;
+      width: 0;
+      height: 0;
+      border-top: 19px solid transparent;
+      border-bottom: 19px solid transparent;
+      border-right: 19px solid rgba(36, 0, 0, 1);
     }
 
     /* Makes the circle */
     .tag:after {
-        transform: rotate(90deg);
-        content: "";
-        background-color: black;
-        border-radius: 50%;
-        width: 6px;
-        height: 6px;
-        display: block;
-        position: absolute;
-        left: -9px;
-        top: 15px;
-
-        @media screen and (min-width: 601px) and (max-width: 960px) {
-            display: none;
-        }
-
-        @media screen and (min-width: 961px) and (max-width: 1280px) {
-            display: none;
-        }
+      transform: rotate(90deg);
+      content: "";
+      background-color: white;
+      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+      display: block;
+      position: absolute;
+      left: -9px;
+      top: 15px;
     }
 
-    .rankdiv {
-        img {
-            height: 100px;
-            width: 100px;
-        }
+    .skins {
+      position: absolute;
+      font-size: 25px;
+      margin: 6rem 0;
 
-        @media screen and (max-width: 600px) {
-            position: absolute;
-            left: 10px;
-            top: 30px;
-
-            img {
-                height: 100px;
-                width: 100px;
-            }
-        }
-
-        @media screen and (min-width: 961px) and (max-width: 1280px) {
-            position: absolute;
-            left: 30px;
-            top: 30px;
-
-            img {
-                height: 100px;
-                width: 100px;
-            }
-        }
+      color: #555555;
+      top: 140px;
+      letter-spacing: 2px;
     }
 
-    .name1 {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        margin-left: auto;
-        margin-right: auto;
-        letter-spacing: 2px;
-        font-family: Arial, Helvetica, sans-serif;
-        // color : #a574ff;
-        color: #FF6600;
-        font-size: calc(1em + 1vw);
-        font-weight: 900;
+    .divider {
+      height: 1.5px;
+      width: 50px;
+      position: absolute;
 
-
-        @media screen and (max-width: 600px) {
-            position: absolute;
-            top: 100px;
-            right: 120px;
-
-        }
-
-        @media screen and (min-width: 961px) and (max-width: 1280px) {
-            position: absolute;
-            top: 110px;
-            right: 500px;
-            font-size: calc(1em + 2vw);
-        }
+      top: 190px;
     }
 
-    .name2 {
-        margin-top: 1rem;
-        margin-left: 1rem;
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #333399;
-        letter-spacing: 2px;
+    .bio {
+      position: absolute;
+      top: 220px;
+      color: #949594;
+      line-height: 28px;
+      font-size: 18px;
+      text-align: center;
+      margin-top: 5rem;
+    }
+  }
+
+  .Photo {
+    height: 50%;
+    width: 100%;
+    background-image: url(https://c.tenor.com/lTn_Gj0ljzYAAAAd/jett-valorant.gif);
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 90px;
+    background-size: 100% 100%;
+    border-radius: 8px;
+    transition: 1.6s;
+
+    @media screen and (max-width: 1280px) {
+      background-image: none;
+    }
+
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      display: none;
+      @media screen and (max-width: 1280px) {
+        height: 90px;
+        width: 90px;
+        position: relative;
         display: flex;
+        top: -50px;
+      }
+    }
+  }
 
-        @media screen and (max-width: 600px) {
-            position: absolute;
-            top: 0px;
-            right: 20px;
+  $separator-size: 5px;
+  $separator-border-style: solid;
+  $separator-border-color: red;
+  $separator-space-top: 25px;
+  $separator-space-bottom: 80px;
 
-        }
+  @mixin dot {
+    $dot-size: 12px;
+    content: "";
+    background-color: $separator-border-color;
+    display: block;
+    height: $dot-size;
+    width: $dot-size;
+    border-radius: 50%;
+  }
 
+  .separator--dots {
+    position: absolute;
+    z-index: 0;
+    left: 18px;
+    overflow: visible;
+    border: 0;
+    @include dot();
+    position: relative;
+
+    &:before {
+      @include dot();
+      position: absolute;
+      left: -32px;
+      animation: dot-move-left 1s ease-out forwards;
     }
 
-    .name3 {
-        margin-top: 1rem;
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #333399;
-        letter-spacing: 2px;
-        display: flex;
+    &:after {
+      @include dot();
+      position: absolute;
+      left: 32px;
+      animation: dot-move-right 1s ease-out forwards;
+    }
+  }
+}
 
-        @media screen and (max-width: 600px) {
-            position: absolute;
-            top: 0px;
-            right: 120px;
+.card:hover .Photo {
+  transform: scale(1, 1) translateY(-50px);
+  background-image: none;
 
-        }
+  @media screen and (max-width: 1280px) {
+    transform: none;
+  }
+  img {
+    height: 90px;
+    width: 90px;
+    position: relative;
+    display: flex;
+    @media screen and (max-width: 1280px) {
+    }
+  }
+}
 
-        @media screen and (min-width: 961px) and (max-width: 1280px) {
-            position: absolute;
-            top: 18px;
-            right: 120px;
-        }
+.card:hover .info {
+  opacity: 1;
+}
 
+.details {
+  position: absolute;
+  // bottom: -70px;
+  bottom: -30px;
+  font-size: 30px;
+  // background-color: #a574ff;
+  color: #f48fb1;
+  width: 80%;
+  padding: 12px 0;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  background-color: #681430;
+}
+
+.details:hover {
+  background-color: #fff;
+  cursor: pointer;
+  color: black;
+}
+
+.buttonnn {
+  position: absolute;
+
+  text-align: center;
+  // bottom: 30px;
+  width: 100%;
+  border-radius: 10px;
+  bottom: 30px;
+
+  background-color: inherit;
+
+  border: none;
+  font-size: 30px;
+  color: #a574ff;
+  padding: 13px 25px;
+  cursor: pointer;
+}
+
+#style-2 {
+  background-color: #c7d3d4ff;
+  height: 400px;
+  margin-top: 50px;
+  overflow-y: scroll;
+  padding-right: 0px;
+
+  @media screen and (max-width: 600px) {
+    width: 700px;
+    margin-left: -35px;
+    margin-top: 20px;
+  }
+
+  @media screen and (min-width: 601px) and (max-width: 960px) {
+    width: 110%;
+    // height: 500px;
+    margin-left: -35px;
+  }
+
+  @media screen and (min-width: 961px) and (max-width: 1280px) {
+    width: 100%;
+    margin-left: -0px;
+    // margin-top: 150px;
+    height: 500px;
+  }
+
+  table {
+    display: table;
+    //  height: 50%;
+    overflow-y: scroll;
+    // width: 250%;
+    border: none;
+  }
+
+  .styled-table {
+    font-family: Arial, Helvetica, sans-serif;
+    // height: 50%;
+    color: black;
+    border: none;
+    width: 100%;
+
+    // height: 100px;       /* Just for the demo          */
+    @media screen and (max-width: 600px) {
+      width: 120%;
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 960px) {
+      width: 140%;
+    }
+
+    @media screen and (min-width: 961px) and (max-width: 1280px) {
+      width: 100%;
+    }
+
+    tr {
+      display: table-cell;
+      border: none;
+      overflow-y: auto;
+      /* Trigger vertical scroll    */
+      overflow-x: auto;
+      /* Hide the horizontal scroll */
+    }
+
+    tr td {
+      display: block;
+      border: none;
+    }
+
+    td {
+      // border: 1px solid #ddd;
+      border: none;
+      padding: 1rem;
+      height: 5rem;
+
+      overflow-y: auto;
+      /* Trigger vertical scroll    */
+      overflow-x: auto;
+
+      /* Hide the horizontal scroll */
+      @media screen and (max-width: 600px) {
+        padding: 1rem;
+      }
+    }
+
+    .captionss {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #a574ff;
+      // color: white;
+      // border: 1px solid #ddd;
+      font-size: 1.5rem;
+      font-family: Dosis;
+
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Scrollbar Styling */
+#style-2::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: black;
+}
+
+#style-2::-webkit-scrollbar {
+  width: 12px;
+  background-color: black;
+}
+
+#style-2::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #a574ff;
+}
+
+.uppermodal {
+  display: flex;
+  justify-content: space-around;
+
+  .circle {
+    position: absolute;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 18px;
+    box-shadow: 0 0 2px #888;
+    height: 30px;
+    width: 30px;
+    left: 20px;
+  }
+
+  .tag {
+    display: inline-block;
+
+    width: auto;
+    height: 38px;
+    background: rgb(36, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(36, 0, 0, 1) 0%,
+      rgba(93, 9, 121, 1) 29%,
+      rgba(89, 40, 108, 1) 59%,
+      rgba(86, 67, 97, 1) 86%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    -webkit-border-radius: 3px 4px 4px 3px;
+    -moz-border-radius: 3px 4px 4px 3px;
+    border-radius: 3px 4px 4px 3px;
+
+    border-left: 1px solid #979797;
+    transform: rotate(90deg);
+    /* This makes room for the triangle */
+    margin-left: -80px;
+    margin-top: 2.5rem;
+    position: relative;
+    margin-bottom: 2rem;
+    color: white;
+    font-weight: 300;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 22px;
+    line-height: 38px;
+
+    padding: 0 10px 0 10px;
+
+    @media screen and (max-width: 600px) {
+      position: absolute;
+      bottom: 100px;
+      right: 40px;
+      transform: rotate(0deg);
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 960px) {
+      position: absolute;
+      bottom: 100px;
+      right: 70px;
+      transform: rotate(0deg);
+      height: 58px;
+      font-size: 42px;
+      padding-top: 0.5rem;
+    }
+
+    @media screen and (min-width: 961px) and (max-width: 1280px) {
+      position: absolute;
+      bottom: 100px;
+      right: 70px;
+      transform: rotate(0deg);
+      height: 58px;
+      font-size: 42px;
+      padding-top: 0.5rem;
+    }
+  }
+
+  /* Makes the triangle */
+  .tag:before {
+    transform: rotate(0deg);
+    content: "";
+    position: absolute;
+    display: block;
+    left: -19px;
+    width: 0;
+    height: 0;
+
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    border-right: 19px solid white;
+
+    @media screen and (min-width: 601px) and (max-width: 960px) {
+      border-top: 29px solid transparent;
+      border-bottom: 29px solid transparent;
+      border-right: 29px solid white;
+      left: -30px;
+      bottom: 0px;
+    }
+
+    @media screen and (min-width: 961px) and (max-width: 1280px) {
+      border-top: 29px solid transparent;
+      border-bottom: 29px solid transparent;
+      border-right: 29px solid white;
+      left: -30px;
+      bottom: 0px;
+    }
+  }
+
+  /* Makes the circle */
+  .tag:after {
+    transform: rotate(90deg);
+    content: "";
+    background-color: black;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    display: block;
+    position: absolute;
+    left: -9px;
+    top: 15px;
+
+    @media screen and (min-width: 601px) and (max-width: 960px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 961px) and (max-width: 1280px) {
+      display: none;
+    }
+  }
+
+  .rankdiv {
+    img {
+      height: 100px;
+      width: 100px;
     }
 
     @media screen and (max-width: 600px) {
-        justify-content: baseline;
+      position: absolute;
+      left: 10px;
+      top: 30px;
+
+      img {
+        height: 100px;
+        width: 100px;
+      }
     }
 
+    @media screen and (min-width: 961px) and (max-width: 1280px) {
+      position: absolute;
+      left: 30px;
+      top: 30px;
+
+      img {
+        height: 100px;
+        width: 100px;
+      }
+    }
+  }
+
+  .name1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    // color : #a574ff;
+    color: #ff6600;
+    font-size: calc(1em + 1vw);
+    font-weight: 900;
+
+    @media screen and (max-width: 600px) {
+      position: absolute;
+      top: 100px;
+      right: 120px;
+    }
+
+    @media screen and (min-width: 961px) and (max-width: 1280px) {
+      position: absolute;
+      top: 110px;
+      right: 500px;
+      font-size: calc(1em + 2vw);
+    }
+  }
+
+  .name2 {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333399;
+    letter-spacing: 2px;
+    display: flex;
+
+    @media screen and (max-width: 600px) {
+      position: absolute;
+      top: 0px;
+      right: 20px;
+    }
+  }
+
+  .name3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333399;
+    letter-spacing: 2px;
+    display: flex;
+
+    @media screen and (max-width: 600px) {
+      position: absolute;
+      top: 0px;
+      right: 120px;
+    }
+
+    @media screen and (min-width: 961px) and (max-width: 1280px) {
+      position: absolute;
+      top: 18px;
+      right: 120px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    justify-content: baseline;
+  }
 }
