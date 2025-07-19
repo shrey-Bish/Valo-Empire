@@ -379,25 +379,26 @@ export default function Formsell() {
                   },
                 }}
               />
-              <TextField
-                variant="outlined"
-                margin="normal"
-                required
-                fullWidth
-                name="email"
-                label="email"
-                type="email"
-                id="email"
-                error={Emailverified}
-                helperText={!Emailverified ? "Invalid Email!" : " "}
-                onChange={(e) => checkemail(e.target.value)}
-                InputLabelProps={{
-                  classes: {
-                    root: classes.cssLabel,
-                    focused: classes.cssFocused,
-                  },
-                }}
-              />
+             <TextField
+  variant="outlined"
+  margin="normal"
+  required
+  fullWidth
+  name="email"
+  label="email"
+  type="email"
+  id="email"
+  error={!Emailverified}
+  helperText={!Emailverified ? "Invalid Email!" : " "}
+  onChange={(e) => checkemail(e.target.value)}
+  InputLabelProps={{
+    classes: {
+      root: classes.cssLabel,
+      focused: classes.cssFocused,
+    },
+  }}
+/>
+
               <TextField
                 variant="outlined"
                 margin="normal"
