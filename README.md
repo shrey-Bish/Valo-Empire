@@ -84,7 +84,8 @@ npm install
 ```bash
 # Terminal 1 (API server)
 cd api
-nodemon server.js
+npx nodemon server.js
+
 
 # Terminal 2 (React client)
 cd client
